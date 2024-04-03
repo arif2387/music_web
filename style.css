@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/*this is using for creating css variable*/
+:root {
+  --purple500: #281154;
+  --purple300: #270082;
+  --purple600: #1b0058;
+  --red600: #dc0000;
+  --body: #f9f6ff;
+  --max-width: 1200px;
+}
+/*this is using for css reseting   */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*ths is using for applying css all body or whole display*/
+html,
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  line-height: 1.4;
+  scroll-behavior: smooth;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+/*this is max-width in % but hight written in vh or margin auto is using for comtainer in center*/
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+/*this css after position all is using for fixed nab bar */
+header {
+  background-color: var(--purple300);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.5)  ;
+}
+/*justify-content space-between is used for space to div arrend the end of    */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  overflow: hidden;
+}
+nav ul {
+  display: flex;
+  gap: 20px;
+  font-weight: bold;
+}
+.logo {
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+}
+/*border wali css property ko hmm use karte thi taki ager hamra nav baar hil rha ho to hmm us ko static kr sake*/
+nav ul li {
+  border-bottom: 2px solid transparent;
+  transition: 0.5s ease-in-out;
+}
+/*this is using for hover effect if cursour is pointed this line is come otherwise it is removed */
+nav ul li:hover {
+  border-bottom: 2px solid white;
+}
+button{
+  padding: 20px;
+}
+/*sabse easy taeika hai kisi bhi item ko center me karna ka phle gdidplay grid kro fir place-item center kar do*/
+.hero_section{
+  background-image:url(images/hero.png);
+  min-height: 100vh;
+  display: grid;
+  color: white;
+  place-items:center;
+  text-align: center;
+  background-size:cover;
+  background-repeat: no-repeat;
+  
+  
+}
+.hero_section h1{
+  font-size: 50px;
+}
+.hero_section h3{
+  font-size: 20px;
+}
+.music-section{
+  padding-top: 50px;
+  background: var(--purple500);
+}
+/*this scss is using for  music contant in middle of  the display*/
+.music-section .container{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+/*this css is usin for image in middle or end of the background colour*/
+.ipad-iphone-img{
+  margin-top: -400px;
+  position: relative;
+  top: 400px;
+}
+.primary-btn{
+
+  color:black;
+  background: #dc0000;
+  font-weight:bold
+}
+.primary-btn:hover{
+  z-index: 2;
+  transition: all 0.3s ease-in-out;
+  background-color: brown;
+
+}
+.secondary-btn{
+  background-color: var(--purple300);
+  color: wheat;
+  font-weight: bold;
+}
+.about-music   {
+  margin-top: 500px;
+  display: grid;
+  place-items: center;
+  gap:50px;
+  text-align: center;
+  margin-bottom: 50px;
+}   
+.video-section{
+  background-image: url(images/video.png);
+  min-height: 800px;
+  display: grid;
+  place-items: center;
+  color: white;
+  text-align: center;
+}
+.video-section .container{
+  display: flex;
+  flex-direction: column;
+  gap:30px;
+   margin-top: -200px;
+}
+.hero_section ,.video-section{
+  position: relative ;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.gift-section{
+  display: flex;
+  justify-content: center;
+  margin: 100px 0;
+  gap:50px;
+    }
+    .gift-content{
+      display: flex;
+      flex-direction: column;
+      gap:20px;
+    }
